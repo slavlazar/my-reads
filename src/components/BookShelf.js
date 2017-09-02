@@ -20,4 +20,12 @@ const BookShelf = ({ title, books, updateBook }) => (
   </div>
 )
 
+BookShelf.propTypes = {
+  title: PropTypes.string.isRequired,
+  books: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired
+  })).isRequired,
+  updateBook: PropTypes.func.isRequired
+}
+
 export default BookShelf
