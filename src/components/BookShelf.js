@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Book from './Book'
 
+/**
+  * Stateless functional component representing a book shelf
+*/
 const BookShelf = ({ title, books, updateBook }) => (
   <div className="bookshelf">
     <h2 className="bookshelf-title">{title}</h2>

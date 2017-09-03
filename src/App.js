@@ -30,6 +30,12 @@ export default class BookApp extends Component {
     })
   }
 
+  findShelf = (id: string) => {
+		const book = this.state.books.find(book => book.id === id)
+
+    return book ? book.shelf : 'none'
+	}
+
   render() {
     return (
       <div className="app">
@@ -42,6 +48,7 @@ export default class BookApp extends Component {
         <Route path="/search" render={({history}) => (
           <Search
             allBooks={this.state.books}
+            findShelf={this.findShelf}
             updateBook={(book, shelf) => {
               this.updateBook(book, shelf)
               history.push('/')
