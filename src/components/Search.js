@@ -14,6 +14,10 @@ export default class Search extends Component {
     books: []
   }
 
+  /**
+   * Updates our search query and performs the search term (BooksAPI.search()) if it is valid
+   * @param {string} query The search query
+   */
   updateQuery = (query) => {
     this.setState({ query })
 

@@ -25,6 +25,11 @@ export default class Book extends Component {
     shelf: ''
   }
 
+  /**
+   * Component life cycle event to set the state shelf from either the book
+   * object, or uses the findShelf method from props to locate the shelf
+   * @override
+   */
   componentDidMount() {
     const { book, findShelf } = this.props
 
